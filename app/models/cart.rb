@@ -19,4 +19,12 @@ class Cart < ApplicationRecord
   def remove_position(position_to_remove_id)
     positions.where(item_id: position_to_remove_id).first.try(:destroy)
   end
+
+  def remove_item(i)
+    if items.include?(i)
+      positions.where(item_id: i.id).first.decrement!(:quantity)
+    else
+      positions.delete(item: i, quantity: 1)
+    end
+  end
 end
