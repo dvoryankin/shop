@@ -5,8 +5,8 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.text   :description
       t.float  :price
       t.float  :weight
-
       t.timestamps
     end
+    add_index :items, :name
   end
 end
