@@ -1,0 +1,10 @@
+<h1><%= @item.name %></h1>
+<p>Описание: <%= @item.description %></p>
+<p>Цена: <b><%= @item.price %></b></p>
+<p>Вес: <b><%= @item.weight %></b></p>
+
+
+<%= link_to "Редактировать товар", edit_item_path(@item) %>
+<br>
+<%= link_to "Удалить товар", item_path(@item),
+method: :delete, data: { confirm: "Уверены?" } %>

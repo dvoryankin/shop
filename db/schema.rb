@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2018_07_24_124059) do
     t.string "imageable_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["imageable_id", "imageable_type"], name: "index_images_on_imageable_id_and_imageable_type"
   end
 
   create_table "items", force: :cascade do |t|

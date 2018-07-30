@@ -1,23 +1,5 @@
-<h1>Создание нового товара</h1><%= form_for @item do |f| %>
-  Name:
-  <br>
-  <%= f.text_field :name %>
-  <br>
-  <br>
-  Description:
-  <br>
-  <%= f.text_field :description %>
-  <br>
-  <br>
-  Price:
-  <br>
-  <%= f.text_field :price %>
-  <br>
-  <br>  
-  Weight:
-  <br>
-  <%= f.text_field :weight %>
-  <br>
-  <br>
+<h1>Создание нового товара</h1>
+<%= form_for @item do |f| %>
+  <%= render partial: "form", locals: { f: f } %>
   <%= f.submit "Создать товар" %>
 <% end %>
