@@ -1,19 +1,18 @@
 <%# "This is ItemsController speaking, hello!" %>
 
 
+<%= params %>
+<br>
+<br>
 
-<%= params[:first_name] %>
-<%= params[:family_name] %>
 
 <h1>This is ItemsController speaking</h1>
 
 <%= @variable %>
 
 <p>
-Hello, <%= params[:first_name] %>
-<%# <%= params[:first_name] %>
+Hello, <%= params[:first_name] params[:family_name] %>
 
-<%# <%= params[:family_name] %>
 </p>
 
 <p>We have <%= @items_count %> items in our store!</p>
